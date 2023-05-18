@@ -1,0 +1,99 @@
+<div class="flex justify-items-center justify-center bg-blue-100">
+  <!-- h-screen -->
+  <!--
+  <div class="w-full md:w-full p-4 justify-items-center">
+    <h1 class="text-2xl font-bold mb-4">Welcome To Cardosa Farms</h1>
+  </div>
+    -->
+  <div class="rounded-xl grid grid-cols-5 gap-1 p-2 bg-blue-200 w-2/3 md:w-2/3">
+    <!-- Left side filler text -->
+    <div class="w-full md:w-full p-4 col-start-1 col-span-2">
+      <h2 class="text-2xl font-bold mb-4">
+        {{ .Site.Params.GalleryGrid.lcolumn.title }}
+      </h2>
+      <p class="mb-4">{{ .Site.Params.GalleryGrid.lcolumn.body }}</p>
+    </div>
+    <!-- right side image grid -->
+
+    <div
+      class="w-full md:w-full p-4 grid grid-cols-2 gap-4 col-start-3 col-span-3"
+    >
+      <div class="bg-gray-200 rounded-xl p-4 flex flex-col">
+        <a
+          href="{{ .Site.Params.GalleryGrid.First.url }}"
+          class="w-full md:w-full"
+        >
+          <img
+            class="w-full mb-2"
+            src=" {{ .Site.Params.GalleryGrid.First.image }}"
+            alt="Image 1"
+            href="{{ .Site.Params.GalleryGrid.First.url }}"
+          />
+          <h3 class="text-lg font-bold mb-2">
+            {{ .Site.Params.Gallerygrid.First.Title }}
+          </h3>
+          <p class="text-sm text-gray-500">
+            {{ .Site.Params.GalleryGrid.First.BodyText }}
+          </p>
+        </a>
+      </div>
+      <div class="bg-gray-200 rounded-xl p-4 flex flex-col">
+        <a
+          href="{{ .Site.Params.GalleryGrid.Second.url }}"
+          class="w-full md:w-full"
+        >
+          <img
+            class="w-full mb-2"
+            src=" {{ .Site.Params.GalleryGrid.Second.image }}"
+            alt="Image 1"
+            href="{{ .Site.Params.GalleryGrid.Second.url }}"
+          />
+          <h3 class="text-lg font-bold mb-2">
+            {{ .Site.Params.Gallerygrid.Second.Title }}
+          </h3>
+          <p class="text-sm text-gray-500">
+            {{ .Site.Params.GalleryGrid.Second.BodyText }}
+          </p>
+        </a>
+      </div>
+      <div class="bg-gray-200 rounded-xl p-4 flex flex-col">
+        <a
+          href="{{ .Site.Params.GalleryGrid.Third.url }}"
+          class="w-full md:w-full"
+        >
+          <img
+            class="w-full mb-2"
+            src=" {{ .Site.Params.GalleryGrid.Third.image }}"
+            alt="Image 1"
+            href="{{ .Site.Params.GalleryGrid.Third.url }}"
+          />
+          <h3 class="text-lg font-bold mb-2">
+            {{ .Site.Params.Gallerygrid.Third.Title }}
+          </h3>
+          <p class="text-sm text-gray-500">
+            {{ .Site.Params.GalleryGrid.Third.BodyText }}
+          </p>
+        </a>
+      </div>
+      <div class="bg-gray-200 rounded-xl p-4 flex flex-col">
+        <a
+          href="{{ .Site.Params.GalleryGrid.Fourth.url }}"
+          class="w-full md:w-full"
+        >
+          <img
+            class="w-full mb-2"
+            src=" {{ .Site.Params.GalleryGrid.Fourth.image }}"
+            alt="Image 1"
+            href="{{ .Site.Params.GalleryGrid.Fourth.url }}"
+          />
+          <h3 class="text-lg font-bold mb-2">
+            {{ .Site.Params.Gallerygrid.Fourth.Title }}
+          </h3>
+          <p class="text-sm text-gray-500">
+            {{ .Site.Params.GalleryGrid.Fourth.BodyText }}
+          </p>
+        </a>
+      </div>
+    </div>
+  </div>
+</div>
