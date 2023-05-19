@@ -1,4 +1,4 @@
-<footer class="bg-tlgray-100">
+<footer class="bg-blue-300">
   {{ if not .IsHome }}
   <script src='{{ "/js/clipboard.min.js" | relURL }}'></script>
   <script src='{{ "/js/highlight.min.js" | relURL }}'></script>
@@ -17,6 +17,7 @@
       });
     }
   </script>
+  {{ end }}
   <script>
     function toggleNav() {
       var hamburger = document.getElementById("hamburgerbtn");
@@ -35,7 +36,7 @@
       document.documentElement.scrollTop = 0;
     });
   </script>
-  {{ end }} {{ if .Site.Params.googleFonts }}
+  {{ if .Site.Params.googleFonts }}
   <link
     href="https://fonts.googleapis.com/css2?family=Montserrat&family=Open+Sans&display=swap"
     rel="stylesheet"
