@@ -1,58 +1,60 @@
 <header>
-  <div id="overlay">
-    <ul class="text-center list-none text-white text-3xl">
-      {{ range .Site.Menus.main }}
-      <li class="p-2">
-        <a href="{{ .URL | safeURL }}">
-          <span>{{ .Name }}</span>
-        </a>
-      </li>
-      {{ end }}
-    </ul>
-  </div>
-  <nav
-    class="flex items-center justify-between flex-wrap p-4 bg-cover shadow-white border-b-2 backdrop-contrast-50 shadow-lg"
-  >
-    <!--    
-      class -> flex-row w-full md:w-full 
-    style="
-      background-image: url('{{ .Site.Params.HeaderImage }}');
-    "-->
-    <div class="flex items-center flex-shrink-0 text-3xl text-grey-900 mr-6">
-      <a href="{{ .Site.BaseURL }}"
-        ><img
-          alt="{{ .Site.Params.logo.alt }}"
-          class="{{ .Site.Params.logo.size }} mr-3"
-          src="{{ .Site.Params.logo.main | relURL }}"
-      /></a>
-    </div>
-
-    <div class="block lg:hidden">
-      <div
-        id="hamburgerbtn"
-        class="flex cursor-pointer items-center w-14 h-10 py-2 rounded mopen"
-      >
-        <span class="top"></span>
-        <span class="middle"></span>
-        <span class="bottom"></span>
-      </div>
-    </div>
-
-    <div
-      class="hidden w-full block flex-grow lg:flex lg:items-center lg:w-auto"
-      id="mobileMenu"
-    >
-      <div class="text-lg lg:flex-grow"></div>
-      <div class="text-lg">
+  <div class="bg-gradient-to-b bg-blue-50 via indigo-50 to-blue-100">
+    <!--bg-gradient-to-b from-blue-100 via-indigo-100 to-indigo-200-->
+    <div id="overlay">
+      <ul class="text-center list-none text-white text-3xl">
         {{ range .Site.Menus.main }}
-        <a
-          href="{{ .URL | safeURL }}"
-          class="duration-200 block mt-4 lg:inline-block lg:mt-0 text-black hover:opacity-60 mr-8"
-        >
-          {{ .Name }}
-        </a>
+        <li class="p-2">
+          <a href="{{ .URL | safeURL }}">
+            <span>{{ .Name }}</span>
+          </a>
+        </li>
         {{ end }}
-      </div>
+      </ul>
     </div>
-  </nav>
+    <nav class="flex items-center justify-between flex-wrap p-4">
+      <!-- nav class="flex items-center justify-between flex-wrap p-4 bg-cover shadow-white border-b-2 backdrop-contrast-50 shadow-lg"-->
+      <!--    
+    class -> flex-row w-full md:w-full 
+  style="
+    background-image: url('{{ .Site.Params.HeaderImage }}');
+  "-->
+      <div class="flex items-center flex-shrink-0 mr-4">
+        <a href="{{ .Site.BaseURL }}"
+          ><img
+            alt="{{ .Site.Params.logo.alt }}"
+            class="{{ .Site.Params.logo.size }} mr-8"
+            src="{{ .Site.Params.logo.main | relURL }}"
+        /></a>
+      </div>
+
+      <div class="block lg:hidden">
+        <div
+          id="hamburgerbtn"
+          class="flex cursor-pointer items-center w-14 h-10 py-2 rounded mopen"
+        >
+          <span class="top"></span>
+          <span class="middle"></span>
+          <span class="bottom"></span>
+        </div>
+      </div>
+
+      <div
+        class="hidden w-full block flex-grow lg:flex lg:items-center lg:w-auto"
+        id="mobileMenu"
+      >
+        <div class="text-lg lg:flex-grow"></div>
+        <div class="text-lg">
+          {{ range .Site.Menus.main }}
+          <a
+            href="{{ .URL | safeURL }}"
+            class="duration-200 block mt-4 lg:inline-block lg:mt-0 text-black hover:opacity-60 mr-8"
+          >
+            {{ .Name }}
+          </a>
+          {{ end }}
+        </div>
+      </div>
+    </nav>
+  </div>
 </header>
