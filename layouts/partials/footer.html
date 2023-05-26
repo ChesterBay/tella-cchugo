@@ -44,11 +44,10 @@
   {{ else }}
   <link href='{{ "css/webfonts.min.css" | relURL }}' rel="stylesheet" />
   {{ end }}
-  <div class="bg-gray-300">
-    <!--class="bg-bgcolor-600/30"-->
+  <div class="bg-colorid-400/90">
     <!-- upper strip -->
     <div
-      class="flex items-center justify-between flex-wrap bg-bgcolor-800/75 p-8 text-white"
+      class="flex items-center justify-between flex-wrap bg-colorid-100/80 p-8 text-colorid-400"
     >
       <div class="items-center text-xl mr-6">{{ .Site.Params.site.name }}</div>
       <div
@@ -60,7 +59,7 @@
           {{ range .Site.Menus.footer }}
           <a
             href="{{ .URL }}"
-            class="block mt-4 lg:inline-block lg:mt-0 text-gray-200 hover:text-white mr-8"
+            class="block mt-4 lg:inline-block lg:mt-0 text-colorid-400/75 hover:text-colorid-400 hover:scale-110 mr-8"
           >
             {{ if not .Pre }} {{ .Name }} {{ else }} {{ .Pre }} {{ end }}
           </a>
@@ -69,7 +68,7 @@
       </div>
     </div>
     <!-- bottom strip -->
-    <div class="copy pl-8 py-5 bg-bgcolor-900/75 text-white text-md">
+    <div class="copy pl-8 py-5 bg-colorid-100/70 text-colorid-400 text-md">
       &copy; {{site.Title}} {{ now.Year }} All Rights Reserved.
     </div>
   </div>

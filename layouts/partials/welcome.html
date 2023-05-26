@@ -1,24 +1,22 @@
-<div
-  class="flex justify-items-center justify-center bg-bgcolor-50 drop-shadow-sm"
->
+<div class="flex justify-items-center justify-center">
   <div
-    class="rounded-xl grid md:grid-cols-5 grid-cols-1 gap-1 p-2 bg-bgcolor-100 w-full md:w-2/3"
+    class="grid md:grid-cols-5 grid-cols-1 gap-1 p-2 bg-colorid-100/80 w-full md:w-2/3"
   >
     <!-- Left side filler text -->
-    <div class="w-full md:shrink-0 p-4 md:col-start-1 md:col-span-2">
-      <h2 class="text-2xl font-bold mb-4">
+    <div class="w-full md:shrink-0 p-4 md:col-start-1 md:col-span-2 prose">
+      <h2 class="text-2xl font-bold mb-4 text-colorid-400 prose">
         {{ .Site.Params.GalleryGrid.lcolumn.title }}
       </h2>
-      <p class="mb-4">{{ .Site.Params.GalleryGrid.lcolumn.body }}</p>
+      <p class="mb-4 text-colorid-400 prose">
+        {{ .Site.Params.GalleryGrid.lcolumn.body }}
+      </p>
     </div>
     <!-- right side image grid -->
 
     <div
-      class="w-full md:w-full p-4 grid md:grid-cols-2 gap-4 md:col-start-3 md:col-span-3 drop-shadow-md"
+      class="w-full md:w-full p-4 grid md:grid-cols-2 gap-4 md:col-start-3 md:col-span-3 drop-shadow-lg"
     >
-      <div
-        class="bg-bgcolor-50 rounded-xl p-4 flex flex-col hover:translate-y-1 hover:"
-      >
+      <div class="bg-colorid-50 rounded-xl p-4 flex flex-col duration:100">
         <a
           href="{{ .Site.Params.GalleryGrid.First.url }}"
           class="w-full md:w-full"
@@ -29,15 +27,15 @@
             alt="Image 1"
             href="{{ .Site.Params.GalleryGrid.First.url }}"
           />
-          <h3 class="text-lg font-bold mb-2">
+          <h3 class="text-xl font-bold mb-2 text-colorid-400 prose">
             {{ .Site.Params.Gallerygrid.First.Title }}
           </h3>
-          <p class="text-sm text-gray-600">
+          <p class="text-base text-colorid-400/90 prose">
             {{ .Site.Params.GalleryGrid.First.BodyText }}
           </p>
         </a>
       </div>
-      <div class="bg-bgcolor-50 rounded-xl p-4 flex flex-col">
+      <div class="bg-colorid-50 rounded-xl p-4 flex flex-col">
         <a
           href="{{ .Site.Params.GalleryGrid.Second.url }}"
           class="w-full md:w-full"
@@ -48,15 +46,15 @@
             alt="Image 1"
             href="{{ .Site.Params.GalleryGrid.Second.url }}"
           />
-          <h3 class="text-lg font-bold mb-2">
+          <h3 class="text-xl font-bold mb-2 text-colorid-400">
             {{ .Site.Params.Gallerygrid.Second.Title }}
           </h3>
-          <p class="text-sm text-gray-600">
+          <p class="text-base text-colorid-400/90">
             {{ .Site.Params.GalleryGrid.Second.BodyText }}
           </p>
         </a>
       </div>
-      <div class="bg-bgcolor-50 rounded-xl p-4 flex flex-col">
+      <div class="bg-colorid-50 rounded-xl p-4 flex flex-col">
         <a
           href="{{ .Site.Params.GalleryGrid.Third.url }}"
           class="w-full md:w-full"
@@ -67,15 +65,15 @@
             alt="Image 1"
             href="{{ .Site.Params.GalleryGrid.Third.url }}"
           />
-          <h3 class="text-lg font-bold mb-2">
+          <h3 class="text-xl font-bold mb-2 text-colorid-400 prose">
             {{ .Site.Params.Gallerygrid.Third.Title }}
           </h3>
-          <p class="text-sm text-gray-600">
+          <p class="text-base text-colorid-400/90 prose">
             {{ .Site.Params.GalleryGrid.Third.BodyText }}
           </p>
         </a>
       </div>
-      <div class="bg-bgcolor-50 rounded-xl p-4 flex flex-col">
+      <div class="bg-colorid-50 rounded-xl p-4 flex flex-col">
         <a
           href="{{ .Site.Params.GalleryGrid.Fourth.url }}"
           class="w-full md:w-full"
@@ -86,10 +84,10 @@
             alt="Image 1"
             href="{{ .Site.Params.GalleryGrid.Fourth.url }}"
           />
-          <h3 class="text-lg font-bold mb-2">
+          <h3 class="text-xl font-bold mb-2 text-colorid-400 prose">
             {{ .Site.Params.Gallerygrid.Fourth.Title }}
           </h3>
-          <p class="text-sm text-gray-600">
+          <p class="text-base text-colorid-400/90 prose">
             {{ .Site.Params.GalleryGrid.Fourth.BodyText }}
           </p>
         </a>
