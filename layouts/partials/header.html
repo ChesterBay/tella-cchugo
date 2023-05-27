@@ -12,23 +12,23 @@
         {{ end }}
       </ul>
     </div>
-    <nav class="flex items-center justify-between flex-wrap p-1 ml-6">
+    <nav class="flex items-center justify-between p-1 ml-2 md:ml-4">
       <!-- nav class="flex items-center justify-between flex-wrap p-4 bg-cover shadow-white border-b-2 backdrop-contrast-50 shadow-lg"-->
 
-      <div class="flex items-center flex-shrink-0 mr-4">
+      <div class="flex items-center flex-shrink-0 md:mr-2">
         <a href="{{ .Site.BaseURL }}"
           ><img
             alt="{{ .Site.Params.logo.alt }}"
-            class="{{ .Site.Params.logo.size }} mr-8"
+            class="{{ .Site.Params.logo.size }} md:mr-2"
             src="{{ .Site.Params.logo.main | relURL }}"
         /></a>
-        <div class="flex mx-auto px-4 justify-center">
-          <h1
-            class="prose text-3xl font-semibold text-colorid-400 mb-8 mt-10 justify-center"
-          >
-            {{ .Site.Params.HeroTitle }}
-          </h1>
-        </div>
+      </div>
+      <div class="text-center align-center flex-wrap">
+        <h1
+          class="md:pl-4 justify-center font-semibold text-colorid-400 md:mb-8 md:mt-10 md:text-2xl"
+        >
+          {{ .Site.Params.HeroTitle }}
+        </h1>
       </div>
 
       <div class="block lg:hidden">
