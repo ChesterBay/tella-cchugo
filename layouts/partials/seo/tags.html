@@ -6,8 +6,10 @@
 <meta property="og:url" content="{{ .page.Permalink }}" />
 <meta property="og:type" content="{{ $seo.type }}" />
 <meta property="og:locale" content="{{ $seo.locale }}" />
-<meta name="twitter:card" content="{{ $seo.twitter_card }}" />
-<meta name="twitter:site" content="@CardosaGoldens" />
+<!--
+<meta name="twitter:card" content="summary_large_image" />
+<meta property="twitter:title" content="{{ .Title }}" />
+-->
 {{ with $seo.canonical }}
 <link rel="canonical" href="{{ . }}" />
 {{ end }}
